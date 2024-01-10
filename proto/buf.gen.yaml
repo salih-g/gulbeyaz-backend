@@ -2,7 +2,7 @@ version: v1
 managed:
   enabled: true
   go_package_prefix:
-    default: github.com/salih-g/gulbeyaz-backend
+    default: github.com/salih-g/gulbeyaz-backend/proto/gen/golang
 
 plugins:
   - plugin: buf.build/protocolbuffers/go:v1.32.0
