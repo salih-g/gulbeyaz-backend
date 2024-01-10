@@ -1,0 +1,19 @@
+version: v1
+managed:
+  enabled: true
+  go_package_prefix:
+    default: github.com/salih-g/gulbeyaz-backend
+
+plugins:
+  - plugin: buf.build/protocolbuffers/go:v1.32.0
+    out: gen/golang
+    opt:
+      - paths=source_relative
+
+  - plugin: buf.build/connectrpc/go:v1.14.0
+    out: gen/golang
+    opt:
+      - paths=source_relative
+
+  - plugin: buf.build/connectrpc/es:v1.2.0
+    out: gen/web
